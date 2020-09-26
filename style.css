@@ -1,0 +1,66 @@
+body {
+    min-width: 320px;
+    background: url("img/back.svg") no-repeat;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-bar{
+    padding: 0 30px;
+
+}
+
+.nav-item {
+    margin-left: 50px;
+    margin-right: 35px;
+}
+
+.nav-item a{
+    color: white;
+    font-family: Montserrat;
+    font-style: italic;
+    font-size: 30px;
+}
+
+#text-color a{
+    color: white;
+}
+
+#text-color a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 1199px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
+}
