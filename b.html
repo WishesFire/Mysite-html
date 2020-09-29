@@ -10,47 +10,65 @@
     <title>Italian shop</title>
   </head>
   <body>
-    <header class="menu-bar">
-      <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="#"><img src="img/logo_shop.png" alt="Logo"></a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto" id="text-color">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Головна</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Продукти</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Контакти</a>
-              </li>
-            </ul>
-          </div>
-          <a class="nav-link" href="#"><img src="img/cart_icon.png" alt="Cart"></a>
-      </nav>
-    </header>
+      <header class="menu-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img class="main-photo" src="img/logo_shop.png" alt="Logo"></a>
 
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <h1 class="main-text">Вітаю на найкращому сайті італійських продуктів</h1>
-            <hr class="line_uppertext"/>
-            <div class="icon__onmainwindow">
-              <img class="small-icons" src="img/pesto.png" alt="Photo1">
-              <img class="small-icons" src="img/pasta.png" alt="Photo2">
-              <img src="img/pepperoni.png" alt="Photo3">
+        <div id="app">
+            <div class="logo-bar">
+              <transition name="fade" mode="out-in">
+                <button class="menu-icon">
+                  <img src="img/menu.png" v-if="!show" @click="show = !show" key="menu" alt="hamb">
+                  <img src="img/close.png" v-else @click="show = !show" key="clear" alt="hamb">
+                </button>
+              </transition>
+              <transition name="fade">
+                <ul class="hamb-ul" v-if="show">
+                  <li class="hamb-li" v-for="item in items">{{ item }}</li>
+                </ul>
+              </transition>
             </div>
-            <div>
-              <img class="react-icon" src="img/Group19.svg" alt="Icon1">
-              <img class="react-icon" src="img/Group21.svg" alt="Icon2">
-              <img src="img/Group22.svg" alt="Icon3">
+        </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto" id="text-color">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Головна</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Продукти</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Контакти</a>
+                </li>
+              </ul>
             </div>
-            <a href="#"><img class="red-button" src="img/red-button.png" alt="Read-button"></a>
+            <a class="nav-link" href="#"><img src="img/cart_icon.png" alt="Cart"></a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <h1 class="main-text">Вітаю на найкращому сайті італійських продуктів</h1>
+              <hr class="line_uppertext"/>
+              <div class="icon__onmainwindow">
+                <img class="small-icons" src="img/pesto.png" alt="Photo1">
+                <img class="small-icons" src="img/pasta.png" alt="Photo2">
+                <img src="img/pepperoni.png" alt="Photo3">
+              </div>
+              <div>
+                <img class="react-icon" src="img/Group19.svg" alt="Icon1">
+                <img class="react-icon" src="img/Group21.svg" alt="Icon2">
+                <img src="img/Group22.svg" alt="Icon3">
+              </div>
+              <a href="#"><img class="red-button" src="img/red-button.png" alt="Read-button"></a>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
